@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Scheduler</title>
+
+    <!--  Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Firebase Reference -->
+
+    <!-- Moment.js Reference -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+    <style>
+        #employee-table th,
+        td {
+            display: inline-block;
+            width: 16.575%;
+        }
+
+        .text-center {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            font-weight: bold;
+        }
+
+        .card {
+            border-color: goldenrod;
+            border-width: 2px;
+            border-padding: 7px;
+        }
+
+        .card-header {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        body {
+            background-color: pink;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron" style="background-color: red; color: white">
+            <h1 class="text-center">The Train in Spain Stays Mainly In The Terain</h1>
+            <h3 class="text-center">Train Times Galore!</h3>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" style="background-color: goldenrod; color: red">
+                        Current Train Schedule
+                    </div>
+                    <!-- Current Employees-->
+
+
+
+                    <table class="table table-sm table-hover" id='train-table'>
+                        <thead>
+                            <tr>
+                                <th scope="col">Train Name</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Frequency (min)</th>
+                                <th scope="col">Next Arrival</th>
+                                <th scope="col">Minutes Away</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+
+
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" style="background-color: goldenrod; color: red">
+                        Add Train
+                    </div>
+                    <br>
+                    <div class="col-md-12">
+                        <form style="padding: 5px">
+                            <div class="form-group row">
+                                <label for="train-name-input">Train Name</label>
+                                <input class="form-control" id="train-name-input" placeholder="Hogwarts Express" type="text">
+                            </div>
+                            <div class="form-group row">
+                                <label for="destination-input">Destination</label>
+                                <input class="form-control" id="destination-input" placeholder="Hogwarts" type="text">
+                            </div>
+                            <div class="form-group row">
+                                <label for="ftt-input">First Train Time (HH:mm - military time)</label>
+                                <input class="form-control" id="ftt-input" placeholder="13:00" type="text">
+                            </div>
+                            <div class="form-group row">
+                                <label for="frequency-input">Frequency (min)</label>
+                                <input class="form-control" id="frequency-input" placeholder="2000" type="text">
+                            </div>
+                            <button class="btn btn-primary float-right" id="add-employee-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
